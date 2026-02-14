@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Dash JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="crash-flash"></div>
+
+        <div id="hud" style="display: none;">
+            <button id="menu-btn" onclick="exitToMenu()">MENU</button>
+            <div class="top-bar">
+                <div id="mode-display">CUBE</div>
+                <div id="progress-container">
+                    <div id="progress-fill"></div>
+                </div>
+                <div id="attempt-display">ATT. <span id="attempt-count">1</span></div>
+            </div>
+        </div>
+
+        <div id="main-menu">
+            <h1 class="logo">GEOMETRY JS</h1>
+            <div class="level-select">
+                <div class="lvl-btn" onclick="startLevel(0)">
+                    <span class="lvl-name">STEREO MADNESS</span>
+                    <span class="lvl-diff" style="color:#00ff00">EASY</span>
+                </div>
+                <div class="lvl-btn" onclick="startLevel(1)">
+                    <span class="lvl-name">BACK ON TRACK</span>
+                    <span class="lvl-diff" style="color:#ffff00">NORMAL</span>
+                </div>
+                <div class="lvl-btn" onclick="startLevel(2)">
+                    <span class="lvl-name">POLARGEIST</span>
+                    <span class="lvl-diff" style="color:#ffaa00">HARD</span>
+                </div>
+                <div class="lvl-btn" onclick="startLevel(3)">
+                    <span class="lvl-name">DRY OUT (MIX)</span>
+                    <span class="lvl-diff" style="color:#ff0000">HARDER</span>
+                </div>
+            </div>
+            <p style="color:#666; font-size: 12px; margin-top: 20px;">Space / Click / Up Arrow to Jump</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
